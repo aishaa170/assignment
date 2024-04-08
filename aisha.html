@@ -1,0 +1,118 @@
+<html>
+<body>
+<script type="text/javascript">
+</script>
+
+
+
+
+
+
+<title> GLORIOUS ACADEMY CHITWAN 
+
+</title>
+<form id ="registrationForm"> 
+
+
+
+<style>
+
+
+
+table, th, td {
+  border:2px solid black;
+}
+
+body{
+   background-color: powderblue;
+}
+</style>
+<h2 class="head" style="text-align:center; background-color:white"> GLORIOUS ACADEMY CHITWAN <br> Bharatpur-04, Chitwan </h2>
+<p>
+<form >
+  <label for="fname"> First name:</label>
+  <input type="text" id="fname"  value="" >
+  <label for="lname"> Last name:</label>
+  <input type="text" id="lname"  value="" >
+  <label for="birth"> Date of birth:</label>
+  <input type="date" id="birth"  value=""><br><br>
+  <label for="school">School  :</label>
+  <input type="text" id="school"  value="">
+  <label for="Roll"> Roll number:</label>
+  <input type="number" id="Roll"  value=""><br><br>
+  <label for="Address"> address:</label>
+  <input type="text" id="Address" value="">
+  <label for="city"> city name:</label>
+  <input type="text" id="city" value="">
+  <label for="provincecode"> province code:</label>
+  <select name="province" id="provincecode">
+ 
+  <option value="1">koshi(1) </option>
+   <option value="2">Bagmati(2) </option>
+    <option value="3">Madesh(3) </option>
+	 <option value="4">Gandaki(4)</option>
+	  <option value="5">Lumbini(5) </option>
+	   <option value="6">karnali(6)</option>
+	   <option value="7">Sudurpaschin(7)</option>
+	   </select>
+	   
+	   <br><br>
+	  
+  <label for="course"> Pick your course:</label>
+  <select name="course" id="course" required>
+  <option value="BSC">BSC</option>
+  <option value="BSCIT">BSCIT</option>
+  <option value="MBBS">MBBS</option>
+  <option value="BTECH">BTECH</option>
+</select>
+
+<br><br>
+</form>
+ <input type="submit" value="Submit" onclick="populatedTableData()">
+
+
+ <br><br>
+
+<table id="tbl_data">
+
+<tr>
+<th>first name</th>
+<th>last name</th>
+<th> Birth</th>
+<th>schoolname</th>
+<th>Roll number</th>
+<th>Address</th>
+<th>City</th>
+<th>Provincecode</th>
+
+</tr>
+</table>
+
+
+</body>
+
+ <script>
+        function populatedTableData() {
+            var form = document.getElementById("registrationForm");
+            var table = document.getElementById("tbl_data");
+            var newRow = table.insertRow();
+
+            var cells = [];
+            for (var i = 0; i < 8; i++) {
+                cells[i] = newRow.insertCell(i);
+            }
+
+            cells[0].innerHTML = form.elements["fname"].value;
+            cells[1].innerHTML = form.elements["lname"].value;
+            cells[2].innerHTML = form.elements["birth"].value;
+            cells[3].innerHTML = form.elements["school"].value;
+            cells[4].innerHTML = form.elements["Roll"].value;
+            cells[5].innerHTML = form.elements["Address"].value;
+            cells[6].innerHTML = form.elements["city"].value;
+            cells[7].innerHTML = form.elements["provincecode"].value;
+          
+        }
+    </script>
+</html>
+  
+  
